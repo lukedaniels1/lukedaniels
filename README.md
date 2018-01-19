@@ -1,210 +1,357 @@
+# Jalpc. [![Analytics](https://ga-beacon.appspot.com/UA-73784599-1/welcome-page)](https://github.com/Jack614/jalpc_jekyll_theme)
 
-# Goa
+[![MIT Licence](https://badges.frapsoft.com/os/mit/mit.svg?v=103)](https://opensource.org/licenses/mit-license.php)
+[![stable](http://badges.github.io/stability-badges/dist/stable.svg)](http://github.com/badges/stability-badges)
+[![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.png?v=103)](https://github.com/ellerbrock/open-source-badge/)
 
-Goa is a clean, simple and minimalist theme for blogs and personal websites.
+<http://www.jack003.com>
 
-<img src="http://i.imgur.com/vqMd1Mx.png" width="40%" height="40%" />
+![Blog](blog.gif)
 
-[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://raw.githubusercontent.com/shenoybr/hugo-goa/master/LICENSE)
-[![GitHub stars](https://img.shields.io/github/stars/shenoybr/hugo-goa.svg?style=flat-square)](https://github.com/shenoybr/hugo-goa/stargazers)
-[![GitHub forks](https://img.shields.io/github/forks/shenoybr/hugo-goa.svg?style=flat-square)](https://github.com/shenoybr/hugo-goa/network)
-[![quality badge](https://img.shields.io/badge/cuteness-overload-blue.svg?style=flat-square)](http://www.emergencykitten.com/)
-[![Twitter](https://img.shields.io/twitter/url/https/github.com/shenoybr/hugo-goa.svg?style=social&style=flat-square)](https://twitter.com/intent/tweet?text=Wow:&url=%5Bobject%20Object%5D)
-## Demo
+This is a simple, beautiful and swift theme for Jekyll. It's mobile first, fluidly responsive, and delightfully lightweight.
 
-You can find the demo site in action [here](https://shenoybr.github.io/hugo-goa-demo) and the source [here](https://github.com/shenoybr/hugo-goa-demo).
+It's pretty minimal, but leverages large type and drastic contrast to make a statement, on all devices.
 
-## Installation
+The landing page of the blog is bilingual page.
 
-From the root of your blog:
+If you like this Jekyll theme,please give me encouragement and star this project,I will make it better.
+
+## Ad
+
+[Jalpc-A](https://github.com/Jack614/Jalpc-A): another Jekyll theme written by [AngularJS](https://angularjs.org/).
+
+## Getting Started
+
+If you're completely new to Jekyll, I recommend checking out the documentation at <http://jekyllrb.com> or there's a tutorial by Smashing Magazine.
+
+#### Fork, then clone
+
+**Fork** the repo, and then **clone** it so you've got the code locally.
 
 ```
-mkdir -p themes
-cd themes
-git clone https://github.com/shenoybr/hugo-goa 
+$ git clone https://github.com/<your githubname>/jalpc_jekyll_theme.git
+$ cd jalpc_jekyll_theme
+$ gem install jekyll # If you don't have jekyll installed
+$ rm -rf _site && jekyll server
 ```
 
-## Content creation
+### Modify the `_config.yml`
 
-### Creating a post
+The _config.yml located in the root of the jalpc_jekyll_theme directory contains all of the configuration details for the Jekyll site. The defaults are:
 
-To create a new page or post:
+``` yml
+# Website settings
+title: "Jalpc"
+description: "Jack's blog,use Jekyll and github pages."
+keywords: "Jack,Jalpc,blog,Jekyll,github,gh-pages"
 
-````
-hugo new about.md
-````
-or
+baseurl: "/"
+url: "http://www.jack003.com"
+# url: "http://127.0.0.1:4000"
 
-````
-hugo new posts/first.md
-````
+# author
+author:
+  name: 'Jack'
+  first_name: 'Jia'
+  last_name: 'Kun'
+  email: 'jack19890614@gmail.com'
+  facebook_username: 'jiakunnj'
+  github_username: 'Jack614'
+  head_img: 'static/img/landing/Jack.jpg'
 
-You can now go ahead an edit the newly created file under the `content` directory. Once you are finished editing, to have hugo generate the page, set `draft = false` in the articles front matter. 
+# social link
+jingyu:
+  first_name: 'Yu'
+  last_name: 'Jing'
+  description: 'Painter.'
+  link: 'http://angular.jack003.com'
+  email: '805963294@qq.com'
 
-### Organizing pages
+# landing page
+landing:
+  home: 'Home'
+  about: 'About'
+  career: 'Career'
+  skills: 'Skills'
+  projects: 'Project'
+  blog: 'Blog'
+  contact: 'Link'
 
-The above example demonstrates how to create a pages and posts. Hugo automatically applies the list templates for a directory of pages/posts, which works well for blogs and posts. However, you may want at times want to override this behavior and create a standalone page (like an about page or projects page) or have more control of what content is listed from within the directory. In such cases, you can override the default behavior by placing an index.md file in the corresponding content
-directory.
+# my projects
+project:
+  saplatform:
+    name: 'Saplatform'
+    url: '/Jack614/saplatform'
+    img: 'static/img/landing/saplatform.jpg'
+  jalpc:
+    name: 'Jalpc'
+    url: '/Jack614/jalpc_jekyll_theme'
+    img: 'static/img/landing/jekyll.jpg'
+  angularjs:
+    name: 'Jalpc-A'
+    url: '/Jack614/Jalpc-A'
+    img: 'static/img/landing/angularjs.jpg'
 
-````
-hugo new projects/index.md
-````
+# blog index
+index:
+  home: 'Home'
+  python: 'Python'
+  linux: 'Linux'
+  html: 'HTML'
+  database: 'Database'
+  mac: 'Mac'
+  life: 'Life'
 
-### Page settings
-
-These settings are at the page level.
-
-- `showpagemeta`: default=`true`. This allows you to disable page meta information from being displayed. For example, this setting is disabled [here](https://shenoybr.github.io/hugo-goa-demo/about/) and enabled [here](https://shenoybr.github.io/hugo-goa-demo/coderag/).
-- `showcomments`: default=`true`. Enables or disable comments. For example, this setting is disabled [here](https://shenoybr.github.io/hugo-goa-demo/blog/third/) and enabled [here](https://shenoybr.github.io/hugo-goa-demo/blog/first/).
-
-## Configuration
-
-The provided [config.toml](https://github.com/shenoybr/hugo-goa/blob/master/exampleSite/config.toml) describes all options and features that are supported. Configure it your way!
-
-### Basic Configuration
-
-These are site wide configuration parameters that are used by this template.
-
-- `baseurl`: This is the root of your site.
-- `builddrafts`: default=`false`. Enables or Disable building drafts when hugo is run.
-- `canonifyurls`: default=`false`. Prefix all relative URLs with your base URL. [More Information](https://gohugo.io/extras/urls#canonicalization).
-- `languageCode`: Used to set site localization preferences. eg. `en-US`.
-- `contentdir`: Where hugo can find your content. eg. `content`.
-- `layoutdir`: Where hugo can find your templates. eg. `layouts`.
-- `publishdir`: Where hugo generates the static site. eg. `public`.
-- `author`: Site author name. eg. `Erlich Bachman`.
-- `title`: Site title name. eg. `Erlich Bachman`.
-- `theme`: Your theme name should be set to `hugo-goa` if using this theme.
-
-## Hugo Built-in Features
-
-These are features that hugo provides and are used by this template.
-
-- `disqusShortname`: Your discusShortname if you want to enable comments on your posts.
-- `googleAnalytics`: Your google analytics id for tracking.
-- `enableRobotsTXT`: Enable or disable search engines from crawling your site.
-
-## Site Settings `[params]`
-
-These are settings that are specific to this theme.
-
-- `author`: Main author name. eg. `Erlich Bachman`.
-- `intro`: Author introduction. This field supports markdown. eg. `Startup Guru Extraordinaire`.
-- `description`: Author description. This field supports markdown. eg. `Now @Pied Piper. Previously @Hacker Hostel, @Bachmanity and @Aviato. <br/> \"What is F times 5? It's Fleventy-five.\"`.
-- `authorimage`: Location of author image under static/img directory. eg. `headshot.jpg`
-- `dateformat`: Golang date format to be used on this site. eg. `Jan 2, 2006`
-
-### Site Meta Settings `[params.meta]`
-
-These settings are included in the site's meta section.
-
-- `description`: User this field to describe your site to search engines. eg. `Simple minimalist theme`.
-- `keywords`: Keywords that desribe your site. eg. `minimalist,blog,goa,hugo,developer`.
-
-### Social Accounts `[params.social]`
-
-These settings to display your social accounts.
-
-- `github`: Your github username.
-- `instagram`: Your instagram username.
-- `xing`: Your xing username.
-- `linkedin`: Your linkedIn username.
-- `twitter`: Your twitter username.
-- `facebook`: Your facebook username.
-- `google`: Your google username.
-- `email`: Your email.
-
-### Extras `[params.extra]`
-
-These settings for extra features that this site uses.
-
-- `copyright`: Add a copyright statement to the bottom of the theme. eg. `© 2016. Erlich Bachman. [Some Rights Reserved](http://creativecommons.org/licenses/by/3.0/)."`
-- `poweredby`: Help promote this theme and give the authors credit. eg. `true` or `false`.
-- `highlightjs`: Use highlightJS to highlight code on your site. eg. `true` or `false`.
-
-### Main Menu `[[menu.main]]`
-
-These settings for the main menu that is displayed on the home page.
-
-- `name`: Name of menu item. eg. `blog`
-- `weight`: Weight of this menu item. Higher items go to the bottom. eg. `100`
-- `url`: Root URL for this section/page. eg. `/blog/`.
-
-Example:
+...
 ```
-[[menu.main]]
-    name = "blog"
-    weight = 100
-    url = "/blog/"
-[[menu.main]]
-    name = "about"
-    weight = 200
-    url = "/about/"
-[[menu.main]]
-    name = "coderag"
-    weight = 300
-    url = "/coderag/"
+### Jekyll Serve
+
+Then, start the Jekyll Server. I always like to give the --watch option so it updates the generated HTML when I make changes.
+
+```
+$ jekyll serve --watch
 ```
 
-## Features
+Now you can navigate to localhost:4000 in your browser to see the site.
 
-* Responsive
-* Minimalist
-* Bootstrap 3
-* Fontawesome
-* HighlighJS
-* Disqus support for commenting
-* Built-in support for 404 pages, Disqus comments and Google Analytics.
+### Using Github Pages
 
-## Screenshots
+You can host your Jekyll site for free with Github Pages. [Click here](https://pages.github.com) for more information.
 
-<img src="http://i.imgur.com/vqMd1Mx.png" width="30%" height="30%" />
-<img src="http://i.imgur.com/dfj8MHz.png" width="30%" height="30%" />
-<img src="http://i.imgur.com/mMFfkZY.png" width="30%" height="30%" />
-<img src="http://i.imgur.com/7e67ypn.png" width="30%" height="30%" />
-<img src="http://i.imgur.com/lz3RGH9.png" width="30%" height="30%" />
-<img src="http://i.imgur.com/IPggNGk.png" width="30%" height="30%" />
-<img src="http://i.imgur.com/FW1Bdln.png" width="10%" height="10%" />
-<img src="http://i.imgur.com/vTY5GeX.png" width="10%" height="10%" />
-<img src="http://i.imgur.com/aJZQYZ6.png" width="10%" height="10%" />
-<img src="http://i.imgur.com/rGQJAF3.png" width="10%" height="10%" />
+A configuration tweak if you're using a gh-pages sub-folder
+
+In addition to your github-username.github.io repo that maps to the root url, you can serve up sites by using a gh-pages branch for other repos so they're available at github-username.github.io/repo-name.
+
+This will require you to modify the _config.yml like so:
+
+``` yml
+# Welcome to Jekyll!
+
+# Site settings
+title: Repo Name
+
+baseurl: "/"
+url: "http://github-username.github.io"
+# url: "http://127.0.0.1:4000"
+
+# author
+author:
+  name: nickname
+  first_name: firstname
+  last_name: lastname
+  email: your_email@example.com
+  facebook_username: facebook_example
+  github_username: 'github_example
+  head_img: 'path/of/head/img'
+
+# landing page
+landing:
+  home: landing-1
+  about: landing-2
+  career: landing-3
+  skills: landing-4
+  blog: landing-5
+  contact: landing-6
+
+# blog index
+index:
+  home: index-1
+  python: index-2
+  linux: index-3
+  html: index-4
+  database: index-5
+  mac: index-6
+  life: index-7
+
+# blog img path
+img_path: '/path/of/blog/img/'
+```
+
+If you start server on localhost, you can turn on `# url: "http://127.0.0.1:4000"`.
+
+### Pagination
+
+The pagination in jekyll is not very perfect,so I use front-end web method,there is a [blog](http://www.jack003.com/html/2016/06/04/jekyll-pagination-with-jpages.html) about the method and you can refer to [jPages](http://luis-almeida.github.io/jPages).
+
+### Page counter
+
+Many third party page counter platform is to slow,so I count my website page view myself,the javascript file is `static/js/count_index.js`,the backend is [Leancloud](https://leancloud.cn).
+
+### Bilingual Page
+
+The landing page of the blog is bilingual page,when you click national flag,the page language changes.The fllowing is how to set up bilingual page.
+
+#### Step 1
+
+To add i18 support for your app you need to define what text you would like to translate. The best way to define your text is to store it in external json file. For example:
+
+**Each language you should have own json file!**
+
+en.json
+
+``` json
+{
+  "website":{
+    "title": "Jalpc"
+  },
+  "nav":{
+    "home": "Home",
+    "about_me": "About",
+    "skills": "Skills",
+    "career": "Career",
+    "blog": "Blog",
+    "contact": "Contact"
+  }
+}
+```
+
+cn.json
+
+``` json
+{
+  "website":{
+    "title": "杰克的博客"
+  },
+  "nav":{
+    "home": "首页",
+    "about_me": "关于我",
+    "skills": "技能",
+    "career": "职业",
+    "blog": "博客",
+    "contact": "联系我"
+  }
+}
+```
+
+#### Step 2
+
+Next you need to add html indicators in all place you want to use i18.(index.html)
+
+``` html
+<a class="navbar-brand" href="#page-top" id="i18_title"><span data-i18n="website.title">{{ site.title }}</span></a>
+```
+
+#### Step 3
+
+Next you need to initialise the i18next plugin:
+json files are located in `static/locales` folder.
+
+``` javascript
+$.i18n.init(
+    resGetPath: 'locales/__lng__.json',
+    load: 'unspecific',
+    fallbackLng: false,
+    lng: 'en'
+}, function (t)
+    $('#i18_title').i18n();
+});
+```
+
+#### Step 4
+
+After that if you want to change the language you just need to add buttons and fire the i18n.setLng() function.
+
+HTML markup
+
+``` html
+<a class="btn btn-sm set_en"><img src="{{"static/img/flags/64/United-States.png"| prepend: site.baseurl }}" height="16px" width="16px"></a>
+<a class="btn btn-sm set_cn"><img src="{{"static/img/flags/64/China.png"| prepend: site.baseurl }}" height="16px" width="16px"></a>
+```
+
+Javascript code
+
+``` javascript
+$('.set_en').on('click', function (){
+    i18n.setLng('en', function(){
+
+        $('#i18_title').i18n();
+
+   });
+});
+
+$('.set_cn').on('click', function (){
+    i18n.setLng('cn', function(){
+
+        $('#i18_title').i18n();
+
+    });
+});
+```
+
+Link: [i18next](http://i18next.github.io/i18next/)
+
+### Web analytics
+
+I use [Baidu analytics](http://tongji.baidu.com/web/welcome/login) and [Google analytics](https://www.google.com/analytics/) to do web analytics, you can choose either to realize it,just register a account and replace id in `_config.yml`.
+
+### Comment
+
+I use [Changyan](http://changyan.kuaizhan.com/) and [Disqus](https://disqus.com/) to realize comment.
+
+#### Changyan
+To configure Changyan, get the appid and conf in <http://changyan.kuaizhan.com/>. Then, in `_config.yml`, edit the changyan value to enable Changyan.
+
+#### Disqus
+To configure Disqus,you should set disqus_shortname and get public key and then, in `_config.yml`, edit the disqus value to enable Disqus.
+
+### Share
+
+I use [bshare](http://www.bshare.cn/) to share my blog on other social network platform. You can register a count and get your share uuid.
+
+### Search engines
+
+I use javascript to realize blog search,you can double click `Ctrl` or click the icon at lower right corner of the page,the detail you can got to this repo: <https://github.com/androiddevelop/jekyll-search>.
+
+Just use it.
+
+![search](search.gif)
+
+### CNAME
+
+Replace your website domain in **CNAME** file.
+
+### Put in a Jalpc Plug
+
+If you want to give credit to the Jalpc theme with a link to my personal website <http://www.jack003.com>, that'd be awesome. No worries if you don't.
+
+### Enjoy
+
+I hope you enjoy using Jalpc. If you encounter any issues, please feel free to let me know by creating an issue. I'd love to help.
+
+## Upgrading Jalpc
+
+Jalpc is always being improved by its users, so sometimes one may need to upgrade.
+
+### Ensure there's an upstream remote
+
+If `git remote -v` doesn't have an upstream listed, you can do the following to add it:
+
+```
+git remote add upstream https://github.com/johnotander/pixyll.git
+```
+
+### Pull in the latest changes
+
+```
+git pull upstream master
+```
+
+There may be merge conflicts, so be sure to fix the files that git lists if they occur. That's it!
+
+## Thanks to the following
+
+* [Jekyll](http://jekyllrb.com)
+* [Bootstrap](http://www.bootcss.com)
+* [jPages](http://luis-almeida.github.io/jPages)
+* [i18next](http://i18next.github.io/i18next)
+* [pixyll](https://github.com/johnotander)
+* [androiddevelop](https://github.com/androiddevelop)
 
 ## Contributing
 
-### Bug Reports
-
-1. Search Github Issues to see if the bug has been previously filed.
-2. If it has been filed, +1 the post. This helps us in assessing impact and priortitizing the bug.
-3. If not previously filed, open a new Github Issue and describe in detail. Attach error traces and provide relavant details to help us solve it.
-4. For Hugo issues, search the Hugo [Forum](https://discuss.gohugo.io/)
-
-### Feature Requests
-
-1. Search Github Issues to see if the feature has been previously requested.
-2. If it has been filed, +1 the post. This helps us in assessing popularity and priortitizing the feature.
-3. If not previously filed, open a new Github Issue and describe it in detail.
-
-### Pull Requests
-
-1. Clone the repository, create the feature/bug branch.
-2. Code.
-3. Make sure your code follows the style of the project.
-4. Test it thoroughly.
-5. Open a PR requesting for it to be merged.
-6. Describe the feature or issue your are solving in detail. 
-7. Wait for its approval.
-8. Merge and Rejoice.
-
-## Attribution
-
-The theme's design was inspired by many blogs and themes:
-
-1. Bruno de Carvalho's [blog](http://biasedbit.com).
-2. [Hugo Cocoa](http://themes.gohugo.io/cocoa/).
-3. [Hugo Vec](http://themes.gohugo.io/hugo-theme-vec/).
-4. [Hugo Agency](http://themes.gohugo.io/hugo-agency/).
-
-## License
-
-Licensed under the [MIT](https://opensource.org/licenses/MIT) License. See the [LICENSE](https://raw.githubusercontent.com/shenoybr/hugo-goa/master/LICENSE) file for more details.
+1. Fork it
+2. Create your feature branch (`git checkout -b my-new-feature`)
+3. Commit your changes (`git commit -am 'Add some feature'`)
+4. Push to the branch (`git push origin my-new-feature`)
+5. Create new Pull Request
 
