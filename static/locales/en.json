@@ -1,0 +1,61 @@
+{
+  "website":{
+    "title": "Lauren's blog"
+  },
+  "nav":{
+    "home": "Home",
+    "about_me": "About",
+    "skills": "Skills",
+    "projects": "Projects",
+    "career": "Career",
+    "blog": "Blog",
+    "photo": "Gallery",
+    "link": "Contact",
+    "cv": "CV"
+  },
+  "about_me":{
+    "about_me": "About Me",
+    "des": "I am a second year PhD student at the University of Vermont and am interested in how certain temporal and spatial factors influence the transmission of amphibian disease, specifically the ranavirus. I am working with my advisor <a href="http://www.uvm.edu/~ngotelli/homepage.html">Dr. Nicholas Gotelli</a> and with the support of my labmates: <a href="http://adnguyen.github.io/">Andrew Nguyen</a> and <a href="https://www.uvm.edu/~anorthro/">Amanda Northrop."
+  },
+  "skills":{
+    "my_skills": "My Skills"
+  },
+  "projects":{
+    "my_projects": "My Projects",
+    "saplatform": "The ranavirus is an amphibian disease causing mass die-offs across the world. It has yet to be documented naturally in Vermont, which is what my research focuses on.",
+    "jalpc": "Liatris-novae angliae is a rare flower endemic to New England. I have been working on comparing historic and present occurrences using data from the Natural Heritage programs of various states."
+  },
+  "career":{
+    "my_career": "My Career",
+    "nextcode": "Amphibian tissue collection",
+    "nextcode_des": "I have just finished my first field season where I collected toe and tail tissue from 18 sites around Vermont.",
+    "nextcode_date": "May-Aug. 2016",
+    "nextcode_job": "Field work",
+    "netease": "Started at the University of Vermont",
+    "netease_des": "I started my journey to obtain my doctorate degree at the University of Vermont, advised by Dr. Nicholas Gotelli.",
+    "netease_date": "Aug. 2015",
+    "netease_job": "PhD student",
+    "ucloud": "Graduated from University College London",
+    "ucloud_des": "I graduated UCL with a Master of Research in Biodiversity, Evolution, and Conservation, completing two species distribution modeling projects during that time.",
+    "ucloud_date": "Sep. 2014",
+    "ucloud_job": "MRes",
+    "college": "Graduated from University of Florida",
+    "college_des": "I graduated from UF with a Bachelor of Science in Wildlife Ecology and Conservation.",
+    "college_date": "May. 2012",
+    "college_job": "B.S."
+  },
+  "blog":{
+    "my_blog": "My Blog"
+  },
+  "photo":{
+    "my_photo": "Gallery"
+  },
+  "cv":{
+    "my_cv": "CV"
+  },
+  "link":{
+    "link": "Contact",
+    "view": "views"
+  }
+
+}
